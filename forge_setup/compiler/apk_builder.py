@@ -42,7 +42,7 @@ else:  # Android — forge_env (Termux privé embarqué)
             _ctx = _ChaqPy.getPlatform().getApplication()
             _forge_env = os.path.join(_ctx.getFilesDir().getAbsolutePath(), "forge_env")
         except Exception:
-            _forge_env = os.path.expanduser("~")
+            _forge_env = os.environ.get("GITHUB_WORKSPACE", os.path.expanduser("~"))
     BASE_DIR = Path(_forge_env)
 
     _tools_dir    = BASE_DIR / "android-tools"
