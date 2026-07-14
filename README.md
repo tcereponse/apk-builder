@@ -1,6 +1,6 @@
-# lala
+# DevPortfolio
 
-creer un landind page colore et responsive pour mobile
+Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive.
 
 ## 🚀 Démarrage rapide
 
@@ -28,15 +28,17 @@ Le serveur de développement démarre sur http://localhost:5173
 - **TypeScript** 5
 - **Styling**: tailwind
 - **Routing**: React Router DOM v6 (HashRouter)
+- **UI Library**: shadcn
 
 ## ✨ Fonctionnalités
 
-- (aucune feature supplémentaire)
+- ✅ animations
+- ✅ darkmode
 
 ## 📁 Structure du projet
 
 ```
-lala/
+devportfolio/
 ├── index.html
 ├── package.json
 ├── vite.config.ts
@@ -53,4 +55,4 @@ lala/
 
 ---
 
-Généré par **React Forge** le 14/07/2026
+Généré par **React Forge** le 13/07/2026
