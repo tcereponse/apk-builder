@@ -1,6 +1,6 @@
-# DevPortfolio
+# TestApp
 
-Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive.
+Calculatrice IMC avec input poids/taille, calcul BMI, affichage catégorie, design sombre Tailwind
 
 ## 🚀 Démarrage rapide
 
@@ -28,17 +28,15 @@ Le serveur de développement démarre sur http://localhost:5173
 - **TypeScript** 5
 - **Styling**: tailwind
 - **Routing**: React Router DOM v6 (HashRouter)
-- **UI Library**: shadcn
 
 ## ✨ Fonctionnalités
 
-- ✅ animations
 - ✅ darkmode
 
 ## 📁 Structure du projet
 
 ```
-devportfolio/
+testapp/
 ├── index.html
 ├── package.json
 ├── vite.config.ts
