@@ -1,6 +1,6 @@
-# lala
+# TestApp
 
-creer un landind page colore et responsive pour mobile
+Calculatrice IMC avec input poids/taille, calcul BMI, affichage catégorie, design sombre Tailwind
 
 ## 🚀 Démarrage rapide
 
@@ -31,12 +31,12 @@ Le serveur de développement démarre sur http://localhost:5173
 
 ## ✨ Fonctionnalités
 
-- (aucune feature supplémentaire)
+- ✅ darkmode
 
 ## 📁 Structure du projet
 
 ```
-lala/
+testapp/
 ├── index.html
 ├── package.json
 ├── vite.config.ts
@@ -53,4 +53,4 @@ lala/
 
 ---
 
-Généré par **React Forge** le 14/07/2026
+Généré par **React Forge** le 13/07/2026
