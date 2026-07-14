@@ -1,0 +1,3 @@
+# ROUTING & PAGES — JACK
+
+## 1. HashRouter (OBLIGATOIRE)
