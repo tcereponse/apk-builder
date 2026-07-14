@@ -48,11 +48,22 @@ else:  # Android — forge_env (Termux privé embarqué)
     _tools_dir    = BASE_DIR / "android-tools"
     ZIPALIGN      = _tools_dir / "zipalign_py.py"  # Python pur — voir chantier 2
     APKSIGNER     = _tools_dir / "apksigner.jar"   # JAR Java pur
+    
+    # GITHUB ACTIONS OVERRIDE
+    if "GITHUB_WORKSPACE" in os.environ and "ANDROID_SDK_ROOT" in os.environ:
+        import glob
+        _sdk_build_tools = glob.glob(os.environ["ANDROID_SDK_ROOT"] + "/build-tools/*")
+        if _sdk_build_tools:
+            _sdk_build_tools.sort(reverse=True)
+            ZIPALIGN = Path(_sdk_build_tools[0]) / "zipalign"
+            APKSIGNER = Path(_sdk_build_tools[0]) / "apksigner"
+
     JAVA_HOME     = None                            # JVM Android native
     APKTOOL_JAR   = BASE_DIR / "forge_setup" / "core" / "apktool.jar" if (BASE_DIR / "forge_setup" / "core").exists() else BASE_DIR / "apktool" / "apktool.jar"
     
     # Keystore resolution
     _ks_candidates = [
+        BASE_DIR / "forge_setup" / "compiler" / "elite_jks.keystore",
         BASE_DIR / "forge_setup" / "core" / "elite_prod.p12",
         BASE_DIR / "forge_setup" / "core" / "elite_jks.keystore",
         BASE_DIR / "keystore" / "elite_jks.keystore",
@@ -1150,18 +1161,18 @@ class DiamondForgeBuilder:
                     check=True, capture_output=True, env=env
                 )
             else:
-                # Android : zipalign_py.py Python pur
                 _zipalign_script = str(ZIPALIGN)
                 if Path(_zipalign_script).exists():
-                    res_za = subprocess.run(
-                        [sys.executable, _zipalign_script, "-f", "4", str(work_apk), str(aligned_apk)],
-                        capture_output=True, env=env
-                    )
+                    if _zipalign_script.endswith(".py"):
+                        cmd = [sys.executable, _zipalign_script, "-f", "4", str(work_apk), str(aligned_apk)]
+                    else:
+                        cmd = [_zipalign_script, "-f", "-p", "-v", "4", str(work_apk), str(aligned_apk)]
+                    
+                    res_za = subprocess.run(cmd, capture_output=True, env=env)
                     if res_za.returncode != 0:
-                        raise RuntimeError(f"zipalign_py exit {res_za.returncode}")
+                        raise RuntimeError(f"zipalign exit {res_za.returncode}")
                 else:
-                    # Fallback ultime : copie directe (sans alignement)
-                    self._log("⚠️ zipalign_py.py absent — copie directe (alignement ignoré).")
+                    self._log("⚠️ zipalign absent — copie directe (alignement ignoré).")
                     shutil.copy2(work_apk, aligned_apk)
         except Exception as e:
             self._log(f"⚠️ Échec Alignement : {e}. Utilisation du build non-aligné.")
@@ -1243,7 +1254,7 @@ class DiamondForgeBuilder:
                         temp_signed = str(aligned_apk) + ".signed"
                         for ks_pwd in ["eliteforge", "qodmax"]:
                             sign_cmd = (
-                                f"apksigner sign "
+                                f"\"{APKSIGNER}\" sign "
                                 f"--ks \"{KEYSTORE_PATH}\" "
                                 f"--ks-pass pass:{ks_pwd} "
                                 f"--ks-key-alias elite "
