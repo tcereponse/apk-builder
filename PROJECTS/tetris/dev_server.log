@@ -1,23 +1,26 @@
 --- Lancement du Dev Server pour tetris ---
-warn: This version of pnpm requires at least Node.js v22.13
-warn: The current version of Node.js is v20.20.0
-warn: Visit https://r.pnpm.io/comp to see the list of past pnpm versions with respective Node.js version support.
-node:internal/modules/cjs/loader:1031
-      throw new ERR_UNKNOWN_BUILTIN_MODULE(request);
-            ^
 
-Error [ERR_UNKNOWN_BUILTIN_MODULE]: No such built-in module: node:sqlite
-    at Module._load (node:internal/modules/cjs/loader:1031:13)
-    at Module.require (node:internal/modules/cjs/loader:1289:19)
-    at require (node:internal/modules/helpers:182:18)
-    at ../store/index/lib/index.js (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:99618:25)
-    at __init (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:17:58)
-    at ../resolving/npm-resolver/lib/index.js (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:104710:5)
-    at __init (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:17:58)
-    at ../workspace/projects-graph/lib/index.js (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:104848:5)
-    at __init (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:17:58)
-    at ../workspace/projects-filter/lib/index.js (file:///C:/Users/patri/AppData/Roaming/npm/node_modules/pnpm/dist/pnpm.mjs:106248:5) {
-  code: 'ERR_UNKNOWN_BUILTIN_MODULE'
-}
+> tetris@1.0.0 dev F:\save disk E\bestmode\PROJECTS\tetris
+> vite "--host" "--strictPort"
 
-Node.js v20.20.0
+X [ERROR] Unexpected "on" in JSON
+
+    tsconfig.json:1:0:
+      1 │ on
+        ╵ ~~
+
+[31mfailed to load config from F:\save disk E\bestmode\PROJECTS\tetris\vite.config.ts[39m
+[31merror when starting dev server:
+Error: Build failed with 1 error:
+tsconfig.json:1:0: ERROR: Unexpected "on" in JSON
+    at failureErrorWithLog (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:1472:15)
+    at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:945:25
+    at runOnEndCallbacks (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:1315:45)
+    at buildResponseToResult (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:943:7)
+    at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:970:16
+    at responseCallbacks.<computed> (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:622:9)
+    at handleIncomingPacket (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:677:12)
+    at Socket.readFromStdout (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:600:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)[39m
+ ELIFECYCLE  Command failed with exit code 1.

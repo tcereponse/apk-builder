@@ -1,13 +1,14 @@
+x
 import { HashRouter } from 'react-router-dom';
-import { AppProvider } from './contexts/AppProvider';
+import { GameProvider } from '../features/game/contexts/GameContext';
 import AppRoutes from './router';
 function App() {
 return (
-<AppProvider>
 <HashRouter>
+<GameProvider>
 <AppRoutes />
+</GameProvider>
 </HashRouter>
-</AppProvider>
 );
 }
 export default App;

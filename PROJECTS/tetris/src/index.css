@@ -1,11 +1,4 @@
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-margin: 0;
-padding: 0;
-background-color: #0f0f23;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/// <reference types="vite/client" />
