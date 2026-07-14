@@ -26,16 +26,13 @@ export function GamePage() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    // Fond
     ctx.fillStyle = '#0f172a'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    // Bordure de jeu
     ctx.strokeStyle = '#1e293b'
     ctx.lineWidth = 2
     ctx.strokeRect(0, 0, canvas.width, canvas.height)
 
-    // Brique
     state.bricks.forEach(brick => {
       ctx.fillStyle = brick.color
 ))}}}

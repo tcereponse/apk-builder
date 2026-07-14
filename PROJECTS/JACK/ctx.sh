@@ -1,6 +1,5 @@
 adowBlur = 0
 
-    // HUD
     ctx.fillStyle = '#94a3b8'
     ctx.font = 'bold 18px Inter, sans-serif'
     ctx.textAlign = 'left'
@@ -10,7 +9,6 @@ adowBlur = 0
     ctx.textAlign = 'left'
     ctx.fillText(`❤️ ${state.lives}`, 20, 65)
 
-    // Message d'attente
     if (state.status === 'idle') {
       ctx.fillStyle = 'rgba(148,163,184,0.7)'
       ctx.font = '20px Inter, sans-serif'
@@ -18,7 +16,6 @@ adowBlur = 0
       ctx.fillText('Clique ou tape pour lancer', canvas.width / 2, canvas.height / 2 + 40)
     }
 
-    // Message pause
     if (state.status === 'paused') {
       ctx.fillStyle = 'rgba(15,23,42,0.8)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
@@ -55,10 +52,8 @@ adowBlur = 0
       return
     }
 
-    // Mise à jour ball
     dispatch({ type: 'UPDATE_BALL', payload: ball })
 
-    // Destruction briques
     for (const brickId of destroyedBrickIds) {
       const brick = state.bricks.find(b => b.id === brickId)
       if (brick) {
@@ -67,7 +62,6 @@ adowBlur = 0
       }
     }
 
-    // Vérification victoire
     if (state.bricks.length === 0) {
       const newLevel = state.level + 1
       const bricks = generateLevel(newLevel)
@@ -153,7 +147,6 @@ adowBlur = 0
           onClick={handleCanvasClick}
         />
         
-        {/* Contrôles overlay */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
           <button
             onClick={() => {

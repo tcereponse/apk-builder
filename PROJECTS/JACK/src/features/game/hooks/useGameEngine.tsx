@@ -86,7 +86,6 @@ export function useGameEngine(canvasRef: React.RefObject<HTMLCanvasElement>) {
     const bricks = generateLevel(state.level)
     dispatch({ type: 'INIT_GAME' })
     dispatch({ type: 'START_GAME' })
-    // Position initiale de la balle
     const ball: Ball = {
       x: state.paddle.x + state.paddle.width / 2,
       y: state.paddle.y - 16,

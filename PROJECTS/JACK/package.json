@@ -14,11 +14,13 @@ on
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
+    "uuid": "^9.0.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
+    "@types/uuid": "^9.0.8",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
@@ -27,41 +29,3 @@ on
     "vite": "^5.0.8"
   }
 }
-
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  }
-}
-
-import type { Config } from 'tailwindcss'
-
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{ts,tsx}"
-  ],
-  theme: {
-    extend: {
-      colors: {
-        slate: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a'
-        }
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']
-      }
-    }
-  },
-  plugins: []
-} satisfies Config

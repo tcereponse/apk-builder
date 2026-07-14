@@ -1,5 +1,9 @@
 #!/bin/bash
-echo "[Sovereign Forge] Installation..."
-pnpm install
-echo "[Sovereign Forge] Lancement..."
+echo "🔧 JACK - Installation et lancement (Unix)"
+echo "=========================================="
+cd "$(dirname "$0")"
+echo "📦 Installation des dépendances..."
+pnpm install --legacy-peer-deps
+echo ""
+echo "🔥 Démarrage du serveur de développement..."
 pnpm dev
