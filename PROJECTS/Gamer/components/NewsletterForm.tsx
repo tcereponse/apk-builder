@@ -1,0 +1,1 @@
+x	✅ OK	Zod validation, localStorage

@@ -1,0 +1,1 @@
+x	✅ OK	Social links, legal links

@@ -1,63 +1,54 @@
-name: 💎 Diamond Forge - APK Cloud Builder
-
+name: Build APK 🤖
 on:
-  push:
-    paths:
-      - 'PROJECTS/**'
   workflow_dispatch:
     inputs:
       project_name:
-        description: 'Nom du projet à compiler (ex: JACK)'
+        description: "Nom du projet"
         required: true
-        default: 'JACK'
 
 jobs:
-  build-apk:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Récupération du code
+      - name: Récupération du code
         uses: actions/checkout@v4
 
-      - name: 🛠️ Configuration de Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: 📦 Configuration de Node.js & PNPM
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-      - run: npm install -g pnpm
+          node-version: 18
 
-      - name: ⚙️ Configuration de Java (JDK 17)
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: 'zulu'
           java-version: '17'
 
-      - name: 🤖 Configuration Android SDK
+      - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: 🚀 Compilation du Web Bundle (React)
-        run: |
-          PROJECT_NAME="${{ github.event.inputs.project_name || 'JACK' }}"
-          if [ -d "PROJECTS/$PROJECT_NAME" ]; then
-            cd PROJECTS/$PROJECT_NAME
-            pnpm install
-            pnpm run build
-          else
-            echo "Erreur: Le dossier PROJECTS/$PROJECT_NAME n'existe pas."
-            exit 1
-          fi
+      - name: Installation des dépendances
+        working-directory: PROJECTS/${{ github.event.inputs.project_name }}
+        run: npm install
 
-      - name: 💎 Lancement de la Forge (Suture APK)
-        run: |
-          PROJECT_NAME="${{ github.event.inputs.project_name || 'JACK' }}"
-          mkdir -p output
-          python forge_setup/compiler/apk_builder.py --name "$PROJECT_NAME" --source "PROJECTS/$PROJECT_NAME" --output output --shell react
+      - name: Build Vite
+        working-directory: PROJECTS/${{ github.event.inputs.project_name }}
+        run: npm run build
 
-      - name: 📤 Upload de l'APK Final
+      - name: Ajout de Capacitor
+        working-directory: PROJECTS/${{ github.event.inputs.project_name }}
+        run: |
+          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npx cap init KirovApp com.kirov.app --web-dir dist
+          npx cap add android
+          npx cap sync android
+
+      - name: Compilation de l'APK
+        working-directory: PROJECTS/${{ github.event.inputs.project_name }}/android
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.project_name || 'JACK' }}_APK
-          path: output/*.apk
+          name: ${{ github.event.inputs.project_name }}_APK
+          path: PROJECTS/${{ github.event.inputs.project_name }}/android/app/build/outputs/apk/debug/app-debug.apk

@@ -1,0 +1,1 @@
+x	✅ OK	Fixed header, scroll detection

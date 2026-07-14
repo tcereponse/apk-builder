@@ -1,0 +1,1 @@
+x	✅ OK	Rating stars, avatar fallback

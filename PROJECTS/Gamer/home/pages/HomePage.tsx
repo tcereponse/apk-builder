@@ -1,0 +1,1 @@
+x	✅ OK	Sections composées

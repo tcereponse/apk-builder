@@ -1,0 +1,1 @@
+x	✅ OK	Props typées, animations
