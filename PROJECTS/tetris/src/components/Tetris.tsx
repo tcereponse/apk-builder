@@ -177,7 +177,7 @@ return displayBoard.map((row, rowIdx) => (
       <div key={rowIdx} style={{ display: 'flex' }}>
         {row.map((cell, colIdx) => (
           <div
-            key={`{${rowIdx}-${colIdx}`}
+            key={`${rowIdx}-${colIdx}`}
             style={{
               width: BLOCK_SIZE,
               height: BLOCK_SIZE,

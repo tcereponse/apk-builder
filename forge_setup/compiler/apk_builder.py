@@ -877,7 +877,7 @@ class DiamondForgeBuilder:
     def personalize_identity(self, base_shell_path, env=None):
         """Crée une coquille personnalisée avec le nom et le package ID du projet."""
         custom_dir = ARSENAL_DIR / "custom"
-        custom_dir.mkdir(exist_ok=True)
+        custom_dir.mkdir(parents=True, exist_ok=True)
         
         # Calcul du Package ID sécurisé dès le début pour l'utiliser dans le nom du cache
         safe_name = self.name.lower().replace(" ", "_")

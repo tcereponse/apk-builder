@@ -1,61 +1,486 @@
 --- Lancement du Dev Server pour tetris ---
-Progress: resolved 1, reused 0, downloaded 0, added 0
-Progress: resolved 9, reused 7, downloaded 0, added 0
-Progress: resolved 26, reused 15, downloaded 0, added 0
-Progress: resolved 96, reused 44, downloaded 0, added 0
-Progress: resolved 165, reused 57, downloaded 0, added 0
-Progress: resolved 179, reused 65, downloaded 0, added 0
-Packages: +135
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Progress: resolved 181, reused 90, downloaded 0, added 0
-Progress: resolved 181, reused 121, downloaded 0, added 0
-Progress: resolved 181, reused 135, downloaded 0, added 1
-Progress: resolved 181, reused 135, downloaded 0, added 12
-Progress: resolved 181, reused 135, downloaded 0, added 15
-Progress: resolved 181, reused 135, downloaded 0, added 24
-Progress: resolved 181, reused 135, downloaded 0, added 44
-Progress: resolved 181, reused 135, downloaded 0, added 65
-Progress: resolved 181, reused 135, downloaded 0, added 77
-Progress: resolved 181, reused 135, downloaded 0, added 82
-Progress: resolved 181, reused 135, downloaded 0, added 87
-Progress: resolved 181, reused 135, downloaded 0, added 90
-Progress: resolved 181, reused 135, downloaded 0, added 91
-Progress: resolved 181, reused 135, downloaded 0, added 93
-Progress: resolved 181, reused 135, downloaded 0, added 98
-Progress: resolved 181, reused 135, downloaded 0, added 104
-Progress: resolved 181, reused 135, downloaded 0, added 110
-Progress: resolved 181, reused 135, downloaded 0, added 111
-Progress: resolved 181, reused 135, downloaded 0, added 118
-Progress: resolved 181, reused 135, downloaded 0, added 134
-Progress: resolved 181, reused 135, downloaded 0, added 135
-Progress: resolved 181, reused 135, downloaded 0, added 135, done
-
-dependencies:
-+ lucide-react 0.378.0 (1.24.0 is available)
-+ react 18.3.1 (19.2.7 is available)
-+ react-dom 18.3.1 (19.2.7 is available)
-+ react-router-dom 6.30.4 (7.18.1 is available)
-+ zod 4.4.3
-
-devDependencies:
-+ @vitejs/plugin-react 4.7.0 (6.0.3 is available)
-+ autoprefixer 10.5.2
-+ postcss 8.5.19
-+ tailwindcss 3.4.19 (4.3.2 is available)
-+ typescript 5.9.3 (7.0.2 is available)
-+ vite 5.4.21 (8.1.4 is available)
-
-The following dependencies have build scripts that were ignored: esbuild
-To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
-
-Done in 36.5s
 
 > tetris@1.0.0 dev F:\save disk E\bestmode\PROJECTS\tetris
 > vite "--host" "--strictPort"
 
 
-  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m4991[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m930[22m[2m[0m ms[22m
 
   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.148:[1m5173[22m/[39m
 [2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m10:07:49[22m [31m[1m[vite][22m[39m Pre-transform error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unexpected token (250:0)
+
+[0m [90m 248 |[39m }[33m;[39m
+ [90m 249 |[39m [36mexport[39m [36mdefault[39m [33mTetris[39m
+[31m[1m>[22m[39m[90m 250 |[39m }
+ [90m     |[39m [31m[1m^[22m[39m[0m
+Error: [31m  Failed to scan for dependencies from entries:
+  F:/save disk E/bestmode/PROJECTS/tetris/index.html
+
+  [39m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnexpected "}"[0m
+
+    src/components/Tetris.tsx:250:0:
+[37m      250 │ [32m}[37m
+          ╵ [32m^[0m
+
+
+    at failureErrorWithLog (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:1472:15)
+    at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:945:25
+    at runOnEndCallbacks (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:1315:45)
+    at buildResponseToResult (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:943:7)
+    at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:954:54)
+    at handleRequest (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:647:17)
+    at handleIncomingPacket (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:672:7)
+    at Socket.readFromStdout (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\esbuild\lib\main.js:600:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23)
+[2m10:07:50[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unexpected token (250:0)
+
+[0m [90m 248 |[31m }[33m;[31m
+ [90m 249 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m
+[31m[1m>[22m[31m[90m 250 |[31m }
+ [90m     |[31m [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:250:0
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11459:22)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12912:23)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseModuleItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12761:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13333:36)
+      at TypeScriptParserMixin.parseBlockBody (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseProgram (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12639:10)
+      at TypeScriptParserMixin.parseTopLevel (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12629:25)
+      at TypeScriptParserMixin.parse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:14505:25)
+      at TypeScriptParserMixin.parse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10143:18)
+      at parse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:14539:38)
+      at parser (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:261:32)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:223:11)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:189:28
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:113:33
+      at step (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:287:14)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:223:11)
+
+[31mCould not open index.js in the editor.[39m
+
+[2m10:08:27[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unexpected token (250:0)
+
+[0m [90m 248 |[31m }[33m;[31m
+ [90m 249 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m
+[31m[1m>[22m[31m[90m 250 |[31m }
+ [90m     |[31m [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:250:0
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.unexpected (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6636:16)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11459:22)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12912:23)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseModuleItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12761:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13333:36)
+      at TypeScriptParserMixin.parseBlockBody (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13326:10)
+      at TypeScriptParserMixin.parseProgram (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12639:10)
+      at TypeScriptParserMixin.parseTopLevel (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12629:25)
+      at TypeScriptParserMixin.parse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:14505:25)
+      at TypeScriptParserMixin.parse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10143:18)
+      at parse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:14539:38)
+      at parser (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\parser\index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\transformation\normalize-file.js:51:37)
+      at normalizeFile.next (<anonymous>)
+      at run (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\transformation\index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:261:32)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:223:11)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:189:28
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\core\lib\gensync-utils\async.js:67:7
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:113:33
+      at step (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:287:14)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:273:13
+      at async.call.result.err.err (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\gensync\index.js:223:11)
+[2m10:09:16[22m [36m[1m[vite][22m[39m changed tsconfig file detected: F:\save disk E\bestmode\PROJECTS\tetris\tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+[2m10:09:17[22m [31m[1m[vite][22m[39m Pre-transform error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:12)
+
+[0m [90m 243 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 244 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 245 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m             [31m[1m^[22m[39m
+ [90m 246 |[39m   )
+ [90m 247 |[39m }[33m;[39m
+ [90m 248 |[39m [36mexport[39m [36mdefault[39m [33mTetris[39m[0m
+[2m10:09:17[22m [31m[1m[vite][22m[39m Pre-transform error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:12)
+
+[0m [90m 243 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 244 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 245 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m             [31m[1m^[22m[39m
+ [90m 246 |[39m   )
+ [90m 247 |[39m }[33m;[39m
+ [90m 248 |[39m [36mexport[39m [36mdefault[39m [33mTetris[39m[0m
+[2m10:09:18[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:12)
+
+[0m [90m 243 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 244 |[31m         [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 245 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m             [31m[1m^[22m[31m
+ [90m 246 |[31m   )
+ [90m 247 |[31m }[33m;[31m
+ [90m 248 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:245:12
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.jsxReadToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4460:20)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4786:12)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5799:10)
+      at TypeScriptParserMixin.next (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5709:10)
+      at TypeScriptParserMixin.eat (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5713:12)
+      at TypeScriptParserMixin.expect (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6915:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4692:10)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4707:37)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:39
+      at TypeScriptParserMixin.tryParse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:18)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12764:17)
+[2m10:09:29[22m [31m[1m[vite][22m[39m Pre-transform error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:10)
+
+[0m [90m 243 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 244 |[39m       [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 245 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m           [31m[1m^[22m[39m
+ [90m 246 |[39m   )
+ [90m 247 |[39m }[33m;[39m
+ [90m 248 |[39m [36mexport[39m [36mdefault[39m [33mTetris[39m[0m
+[2m10:09:33[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:10)
+
+[0m [90m 243 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 244 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 245 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m           [31m[1m^[22m[31m
+ [90m 246 |[31m   )
+ [90m 247 |[31m }[33m;[31m
+ [90m 248 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:245:10
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.jsxReadToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4460:20)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4786:12)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5799:10)
+      at TypeScriptParserMixin.next (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5709:10)
+      at TypeScriptParserMixin.eat (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5713:12)
+      at TypeScriptParserMixin.expect (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6915:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4692:10)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4707:37)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:39
+      at TypeScriptParserMixin.tryParse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:18)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12764:17)
+[2m10:09:57[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:10)
+
+[0m [90m 243 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 244 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 245 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m           [31m[1m^[22m[31m
+ [90m 246 |[31m   )
+ [90m 247 |[31m }[33m;[31m
+ [90m 248 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:245:10
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.jsxReadToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4460:20)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4786:12)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5799:10)
+      at TypeScriptParserMixin.next (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5709:10)
+      at TypeScriptParserMixin.eat (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5713:12)
+      at TypeScriptParserMixin.expect (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6915:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4692:10)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4707:37)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:39
+      at TypeScriptParserMixin.tryParse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:18)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12764:17)
+[2m10:09:59[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:10)
+
+[0m [90m 243 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 244 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 245 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m           [31m[1m^[22m[31m
+ [90m 246 |[31m   )
+ [90m 247 |[31m }[33m;[31m
+ [90m 248 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:245:10
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.jsxReadToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4460:20)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4786:12)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5799:10)
+      at TypeScriptParserMixin.next (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5709:10)
+      at TypeScriptParserMixin.eat (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5713:12)
+      at TypeScriptParserMixin.expect (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6915:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4692:10)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4707:37)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:39
+      at TypeScriptParserMixin.tryParse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:18)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12764:17)
+[2m10:10:00[22m [31m[1m[vite][22m[39m [31mInternal server error: F:\save disk E\bestmode\PROJECTS\tetris\src\components\Tetris.tsx: Unterminated JSX contents. (245:10)
+
+[0m [90m 243 |[31m           [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 244 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 245 |[31m     [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m           [31m[1m^[22m[31m
+ [90m 246 |[31m   )
+ [90m 247 |[31m }[33m;[31m
+ [90m 248 |[31m [36mexport[31m [36mdefault[31m [33mTetris[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36mF:/save disk E/bestmode/PROJECTS/tetris/src/components/Tetris.tsx[39m:245:10
+      at constructor (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:365:19)
+      at TypeScriptParserMixin.raise (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6616:19)
+      at TypeScriptParserMixin.jsxReadToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4460:20)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4786:12)
+      at TypeScriptParserMixin.getTokenFromCode (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10004:11)
+      at TypeScriptParserMixin.nextToken (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5799:10)
+      at TypeScriptParserMixin.next (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5709:10)
+      at TypeScriptParserMixin.eat (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:5713:12)
+      at TypeScriptParserMixin.expect (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6915:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4692:10)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4707:37)
+      at TypeScriptParserMixin.jsxParseElementAt (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:39
+      at TypeScriptParserMixin.tryParse (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9792:18)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10801:23)
+      at F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (F:\save disk E\bestmode\PROJECTS\tetris\node_modules\@babel\parser\lib\index.js:12764:17)
