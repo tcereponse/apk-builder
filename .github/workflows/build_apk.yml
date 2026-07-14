@@ -1,0 +1,63 @@
+name: 💎 Diamond Forge - APK Cloud Builder
+
+on:
+  push:
+    paths:
+      - 'PROJECTS/**'
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Nom du projet à compiler (ex: JACK)'
+        required: true
+        default: 'JACK'
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Récupération du code
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Configuration de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Configuration de Node.js & PNPM
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - run: npm install -g pnpm
+
+      - name: ⚙️ Configuration de Java (JDK 17)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: 🤖 Configuration Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: 🚀 Compilation du Web Bundle (React)
+        run: |
+          PROJECT_NAME="${{ github.event.inputs.project_name || 'JACK' }}"
+          if [ -d "PROJECTS/$PROJECT_NAME" ]; then
+            cd PROJECTS/$PROJECT_NAME
+            pnpm install
+            pnpm run build
+          else
+            echo "Erreur: Le dossier PROJECTS/$PROJECT_NAME n'existe pas."
+            exit 1
+          fi
+
+      - name: 💎 Lancement de la Forge (Suture APK)
+        run: |
+          PROJECT_NAME="${{ github.event.inputs.project_name || 'JACK' }}"
+          mkdir -p output
+          python forge_setup/compiler/apk_builder.py --name "$PROJECT_NAME" --source "PROJECTS/$PROJECT_NAME" --output output --shell react
+
+      - name: 📤 Upload de l'APK Final
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.project_name || 'JACK' }}_APK
+          path: output/*.apk
