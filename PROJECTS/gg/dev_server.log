@@ -1,0 +1,8 @@
+--- Lancement du Dev Server pour gg ---
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 9, reused 9, downloaded 0, added 0
+Progress: resolved 137, reused 86, downloaded 0, added 0
+Packages: +133
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ERR_PNPM_ENOENT  ENOENT: no such file or directory, copyfile 'C:\.pnpm-store\v3\files\39\6c350e67a3f2bd6185c6f57d837e8c87d292a15998d95e6978ad24045ecc5d61928cf0c9d83c964df0faca85ae67a130565bddadc58e75fc0d079ae5780430' -> 'F:\save disk E\bestmode\PROJECTS\gg\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild_tmp_20060\node_modules\.bin\esbuild'
+Progress: resolved 179, reused 133, downloaded 0, added 0
