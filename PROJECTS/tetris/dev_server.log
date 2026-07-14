@@ -1,0 +1,61 @@
+--- Lancement du Dev Server pour tetris ---
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 9, reused 7, downloaded 0, added 0
+Progress: resolved 26, reused 15, downloaded 0, added 0
+Progress: resolved 96, reused 44, downloaded 0, added 0
+Progress: resolved 165, reused 57, downloaded 0, added 0
+Progress: resolved 179, reused 65, downloaded 0, added 0
+Packages: +135
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 181, reused 90, downloaded 0, added 0
+Progress: resolved 181, reused 121, downloaded 0, added 0
+Progress: resolved 181, reused 135, downloaded 0, added 1
+Progress: resolved 181, reused 135, downloaded 0, added 12
+Progress: resolved 181, reused 135, downloaded 0, added 15
+Progress: resolved 181, reused 135, downloaded 0, added 24
+Progress: resolved 181, reused 135, downloaded 0, added 44
+Progress: resolved 181, reused 135, downloaded 0, added 65
+Progress: resolved 181, reused 135, downloaded 0, added 77
+Progress: resolved 181, reused 135, downloaded 0, added 82
+Progress: resolved 181, reused 135, downloaded 0, added 87
+Progress: resolved 181, reused 135, downloaded 0, added 90
+Progress: resolved 181, reused 135, downloaded 0, added 91
+Progress: resolved 181, reused 135, downloaded 0, added 93
+Progress: resolved 181, reused 135, downloaded 0, added 98
+Progress: resolved 181, reused 135, downloaded 0, added 104
+Progress: resolved 181, reused 135, downloaded 0, added 110
+Progress: resolved 181, reused 135, downloaded 0, added 111
+Progress: resolved 181, reused 135, downloaded 0, added 118
+Progress: resolved 181, reused 135, downloaded 0, added 134
+Progress: resolved 181, reused 135, downloaded 0, added 135
+Progress: resolved 181, reused 135, downloaded 0, added 135, done
+
+dependencies:
++ lucide-react 0.378.0 (1.24.0 is available)
++ react 18.3.1 (19.2.7 is available)
++ react-dom 18.3.1 (19.2.7 is available)
++ react-router-dom 6.30.4 (7.18.1 is available)
++ zod 4.4.3
+
+devDependencies:
++ @vitejs/plugin-react 4.7.0 (6.0.3 is available)
++ autoprefixer 10.5.2
++ postcss 8.5.19
++ tailwindcss 3.4.19 (4.3.2 is available)
++ typescript 5.9.3 (7.0.2 is available)
++ vite 5.4.21 (8.1.4 is available)
+
+The following dependencies have build scripts that were ignored: esbuild
+To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
+
+Done in 36.5s
+
+> tetris@1.0.0 dev F:\save disk E\bestmode\PROJECTS\tetris
+> vite "--host" "--strictPort"
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m4991[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.148:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m

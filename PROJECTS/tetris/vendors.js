@@ -1,0 +1,1 @@
+(React + React-DOM + React Router): ~45KB gzip

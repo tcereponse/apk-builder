@@ -1,0 +1,1 @@
+(Settings Page): ~3KB gzip
