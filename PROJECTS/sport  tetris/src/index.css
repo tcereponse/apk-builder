@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+:root {
+--background: 0 0% 7%;
+--foreground: 0 0% 98%;
+--primary: 210 100% 50%;
+--border: 0 0% 20%;
+--radius: 0.75rem;
+}
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: #151718;
+color: #f8f9fa;
+font-family: 'Inter', system-ui, sans-serif;
+overflow: hidden;
+height: 100vh;
+width: 100vw;
+user-select: none;
+}
+#root {
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+::-webkit-scrollbar {
+width: 4px;
+}
+::-webkit-scrollbar-track {
+background: #1a1d1e;
+}
+::-webkit-scrollbar-thumb {
+background: #3b82f6;
+border-radius: 2px;
+}
+}
+/// <reference types="vite/client" />

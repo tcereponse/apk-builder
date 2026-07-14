@@ -1,0 +1,55 @@
+on
+{
+"compilerOptions": {
+"target": "ES2020",
+"useDefineForClassFields": true,
+"lib": ["ES2020", "DOM", "DOM.Iterable"],
+"module": "ESNext",
+"skipLibCheck": true,
+"moduleResolution": "bundler",
+"allowImportingTsExtensions": true,
+"resolveJsonModule": true,
+"isolatedModules": true,
+"noEmit": true,
+"jsx": "react-jsx",
+"strict": true,
+"noUnusedLocals": false,
+"noUnusedParameters": false,
+"noFallthroughCasesInSwitch": true,
+"baseUrl": ".",
+"paths": {
+"@/": ["./src/"],
+"@app/": ["./src/app/"],
+"@features/": ["./src/features/"],
+"@shared/": ["./src/shared/"]
+}
+},
+"include": ["src", "vite-env.d.ts"]
+}
+export default {
+plugins: {
+tailwindcss: {},
+autoprefixer: {}
+}
+}
+import type { Config } from 'tailwindcss'
+export default {
+content: [
+'./index.html',
+'./src/**/*.{ts,tsx}'
+],
+theme: {
+extend: {
+colors: {
+background: '#151718',
+foreground: '#f8f9fa',
+primary: '#3b82f6',
+border: '#2a2d2e'
+},
+fontFamily: {
+sans: ['Inter', 'system-ui', 'sans-serif']
+}
+}
+},
+plugins: []
+} satisfies Config

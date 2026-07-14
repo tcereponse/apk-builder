@@ -1,0 +1,6 @@
+export { default as GamePage } from './pages/GamePage'
+export { default as Board } from './components/Board'
+export { default as NextPiecePreview } from './components/NextPiecePreview'
+export { default as GameStats } from './components/GameStats'
+export { default as GameControls } from './components/GameControls'
+export { useGameLoop } from './hooks/useGameLoop'
