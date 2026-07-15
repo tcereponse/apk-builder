@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+[data-theme="diamond"] {
+--bg-primary: #151718;
+--bg-secondary: #1e2022;
+--text-primary: #e8e6e3;
+--border-color: #3a3c3e;
+}
+body {
+background-color: var(--bg-primary);
+color: var(--text-primary);
+}

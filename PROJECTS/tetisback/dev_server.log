@@ -1,0 +1,77 @@
+--- Lancement du Dev Server pour tetisback ---
+ WARN  Moving vite that was installed by a different package manager to "node_modules/.ignored"
+ WARN  Moving typescript that was installed by a different package manager to "node_modules/.ignored"
+ WARN  Moving tailwindcss that was installed by a different package manager to "node_modules/.ignored"
+ WARN  Moving autoprefixer that was installed by a different package manager to "node_modules/.ignored"
+ WARN  Moving postcss that was installed by a different package manager to "node_modules/.ignored"
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 8, reused 7, downloaded 0, added 0
+Progress: resolved 56, reused 47, downloaded 0, added 0
+Progress: resolved 155, reused 107, downloaded 0, added 0
+Packages: +133
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 179, reused 133, downloaded 0, added 1
+Progress: resolved 179, reused 133, downloaded 0, added 6
+Progress: resolved 179, reused 133, downloaded 0, added 21
+Progress: resolved 179, reused 133, downloaded 0, added 37
+Progress: resolved 179, reused 133, downloaded 0, added 50
+Progress: resolved 179, reused 133, downloaded 0, added 54
+Progress: resolved 179, reused 133, downloaded 0, added 55
+Progress: resolved 179, reused 133, downloaded 0, added 67
+Progress: resolved 179, reused 133, downloaded 0, added 80
+Progress: resolved 179, reused 133, downloaded 0, added 94
+Progress: resolved 179, reused 133, downloaded 0, added 109
+Progress: resolved 179, reused 133, downloaded 0, added 123
+Progress: resolved 179, reused 133, downloaded 0, added 130
+Progress: resolved 179, reused 133, downloaded 0, added 133, done
+
+dependencies:
++ react 18.3.1 (19.2.7 is available)
++ react-dom 18.3.1 (19.2.7 is available)
++ react-router-dom 6.30.4 (7.18.1 is available)
+
+devDependencies:
++ @vitejs/plugin-react 4.7.0 (6.0.3 is available)
++ autoprefixer 10.5.3
++ postcss 8.5.19
++ tailwindcss 3.4.19 (4.3.2 is available)
++ typescript 5.9.3 (7.0.2 is available)
++ vite 5.4.21 (8.1.4 is available)
+
+The following dependencies have build scripts that were ignored: esbuild
+To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
+
+Done in 29.3s using pnpm v9.15.9
+
+> tetisback@1.0.0 dev F:\save disk E\bestmode\PROJECTS\tetisback
+> vite "--host" "--strictPort"
+
+X [ERROR] Unexpected "on" in JSON
+
+    tsconfig.json:1:0:
+      1 │ on
+        ╵ ~~
+
+X [ERROR] Expected "}" but found "resolve"
+
+    vite.config.ts:6:2:
+      6 │   resolve: {
+        │   ~~~~~~~
+        ╵   }
+
+[31mfailed to load config from F:\save disk E\bestmode\PROJECTS\tetisback\vite.config.ts[39m
+[31merror when starting dev server:
+Error: Build failed with 2 errors:
+tsconfig.json:1:0: ERROR: Unexpected "on" in JSON
+vite.config.ts:6:2: ERROR: Expected "}" but found "resolve"
+    at failureErrorWithLog (F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:1472:15)
+    at F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:945:25
+    at runOnEndCallbacks (F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:1315:45)
+    at buildResponseToResult (F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:943:7)
+    at F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:970:16
+    at responseCallbacks.<computed> (F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:622:9)
+    at handleIncomingPacket (F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:677:12)
+    at Socket.readFromStdout (F:\save disk E\bestmode\PROJECTS\tetisback\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:600:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)[39m
+ ELIFECYCLE  Command failed with exit code 1.
