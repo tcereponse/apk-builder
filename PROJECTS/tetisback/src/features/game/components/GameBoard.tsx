@@ -14,7 +14,7 @@ if (row >= y && row < y + shape.length && col >= x && col < x + shape[0].length)
 const shapeRow = shape[row - y];
 if (shapeRow && shapeRow[col - x] !== null) {
 if (row === ghostY + (row - y)) {
-return <div key={${row}-${col}} className="w-6 h-6 border border-gray-500 opacity-40" style={{ backgroundColor: shapeRow[col - x] }} />;
+return <div key={`${row}-${col}`} className="w-6 h-6 border border-gray-500 opacity-40" style={{ backgroundColor: shapeRow[col - x] }} />;
 }
 }
 }
@@ -31,9 +31,9 @@ color = shapeRow[col - x];
 }
 }
 if (color) {
-return <div key={${row}-${col}} className="w-6 h-6 border border-gray-700" style={{ backgroundColor: color }} />;
+return <div key={`${row}-${col}`} className="w-6 h-6 border border-gray-700" style={{ backgroundColor: color }} />;
 }
-return <div key={${row}-${col}} className="w-6 h-6 border border-gray-800" />;
+return <div key={`${row}-${col}`} className="w-6 h-6 border border-gray-800" />;
 };
 return (
     <div className="grid grid-cols-10 gap-0 border-2 border-gray-600 p-1 bg-gray-800">
