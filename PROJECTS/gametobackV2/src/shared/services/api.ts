@@ -10,7 +10,7 @@ import { GameFilters } from '@shared/types/game.types';
 function buildQueryString(params: Record<string, string | number | boolean | undefined>): string {
 const entries = Object.entries(params).filter(([, value]) => value !== undefined && value !== '');
 if (entries.length === 0) return '';
-return '?' + entries.map(([key, value]) => ${key}=${encodeURIComponent(String(value))}).join('&');
+return '?' + entries.map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`).join('&');
 }
 export interface FetchGamesOptions extends GameFilters {
 page?: number;
