@@ -23,8 +23,8 @@ circle: 'rounded-full aspect-square',
 card: 'rounded-xl aspect-[2/3]',
 };
 const style = {
-width: typeof width === 'number' ? ${width}px : width,
-height: typeof height === 'number' ? ${height}px : height,
+width: typeof width === 'number' ? `${width}px` : width,
+height: typeof height === 'number' ? `${height}px` : height,
 };
 const classes = twMerge(
 clsx(baseClasses, variantClasses[variant]),
