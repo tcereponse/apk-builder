@@ -14,6 +14,7 @@ initial={{ opacity: 0, y: 20 }}
 animate={{ opacity: 1, y: 0 }}
 transition={{ delay: Math.min(index * 0.05, 0.4), duration: 0.4, ease: 'easeOut' }}
 className="relative group rounded-xl overflow-hidden aspect-[2/3] bg-zinc-900/80"
+>
       <Link to={`/game/${game.id}`} className="block w-full h-full">
         <div className="relative w-full h-full overflow-hidden">
           <img
