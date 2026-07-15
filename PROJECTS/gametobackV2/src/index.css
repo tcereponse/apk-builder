@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+:root {
+--background: 0 0% 7%;
+--foreground: 0 0% 98%;
+--card: 0 0% 10%;
+--card-foreground: 0 0% 98%;
+--border: 0 0% 20%;
+--radius: 0.75rem;
+}
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+{
+-webkit-tap-highlight-color: transparent;
+scroll-behavior: smooth;
+}
+body {
+@apply bg-slate-950 text-slate-100 antialiased;
+font-family: 'Inter', system-ui, -apple-system, sans-serif;
+min-height: 100vh;
+min-height: 100dvh;
+overflow-x: hidden;
+}
+#root {
+@apply min-h-screen min-h-dvh;
+display: flex;
+flex-direction: column;
+}
+::-webkit-scrollbar {
+width: 6px;
+height: 6px;
+}
+::-webkit-scrollbar-track {
+@apply bg-slate-900/50;
+}
+::-webkit-scrollbar-thumb {
+@apply bg-zinc-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+@apply bg-zinc-500;
+}
+}
+@layer components {
+.glass {
+@apply bg-white/5 backdrop-blur-md border border-white/10 shadow-glass;
+}
+.glass-light {
+@apply bg-white/8 backdrop-blur-sm border border-white/5 shadow-glass;
+}
+.glass-dark {
+@apply bg-black/30 backdrop-blur-lg border border-white/5 shadow-glass-lg;
+}
+.glass-hover {
+@apply hover:bg-white/10 transition-all duration-300 hover:shadow-glass-lg hover:border-white/20;
+}
+.text-gradient {
+@apply bg-gradient-to-r from-slate-100 via-zinc-200 to-slate-300 bg-clip-text text-transparent;
+}
+.text-gradient-blue {
+@apply bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent;
+}
+}
+@layer utilities {
+.animate-shimmer {
+background: linear-gradient(
+105deg,
+transparent 30%,
+rgba(255, 255, 255, 0.03) 50%,
+transparent 70%
+);
+background-size: 200% 100%;
+animation: shimmer 2.5s infinite linear;
+}
+.scrollbar-hide {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+display: none;
+}
+}
+/// <reference types="vite/client" />
+interface ImportMetaEnv {
+readonly VITE_RAWG_API_KEY: string
+}
+interface ImportMeta {
+readonly env: ImportMetaEnv
+}
