@@ -1,0 +1,8 @@
+--- Lancement du Dev Server pour gametobackV2 ---
+ ERROR  Unexpected token 'o', "on
+{
+"na"... is not valid JSON while parsing 'on
+{
+"name": "gametobackv2",
+"private' in F:\save disk E\bestmode\PROJECTS\gametobackV2\package.json
+For help, run: pnpm help install
