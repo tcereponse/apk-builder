@@ -54,6 +54,7 @@ return (
 onClick={handleToggle}
 className={classes}
 aria-label={isFav ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+>
 <Heart
 className={iconSizes[size]}
 fill={isFav ? 'currentColor' : 'none'}
