@@ -1,26 +1,60 @@
-centralisé avec les couleurs, les polices et les plugins personnalisés, afin de maintenir facilement le thème.
+import type { Config } from 'tailwindcss';
 
-Implementation DecisionsConfiguration Tailwind : Extension des couleurs avec slate et zinc (déjà présentes), ajout de variables CSS pour les surfaces glass (ex: --glass-bg: rgba(255,255,255,0.05)).
-
-Plugins personnalisés : Créer un plugin Tailwind pour la classe glass appliquant backdrop-filter: blur(12px), background: rgba(255,255,255,0.05), border: 1px solid rgba(255,255,255,0.1), etc.
-
-Composants partagés : Dans src/shared/components/ui/ : Button, Input, Card, Badge, Skeleton, Modal, Toast. Chaque composant utilise clsx et tailwind-merge pour la composition de classes.
-
-Thème : Utiliser un Context ThemeContext pour basculer entre sombre et clair (par défaut sombre). Mais en phase 1, on ne gère que le sombre pour simplifier.
-
-Typographie : Utiliser la police system (par défaut) ou importer Inter via Google Fonts (@import dans index.css).
-
-Icons : Lucide React, avec un wrapper Icon pour homogénéiser la taille et la couleur.
-
-
-Testing DecisionsTester les composants UI de manière visuelle (snapshots ?) mais surtout fonctionnelle : vérifier que les classes appliquées changent en fonction des props (variant, size, etc.).
-
-Tester l'accessibilité avec jest-axe (optionnel).
-
-Ne pas tester les détails du glassmorphism (purement CSS).
-
-Out of ScopeMode clair complet.
-
-Personnalisation avancée des couleurs par l'utilisateur.
-
-Police personnalisée autre que Inter.
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        slate: {
+          850: '#1a2538',
+          900: '#0f172a',
+          950: '#020617',
+        },
+        zinc: {
+          750: '#3f3f46',
+          850: '#27272a',
+          900: '#18181b',
+          950: '#0a0a0c',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+      },
+      borderWidth: {
+        '3': '3px',
+      },
+      boxShadow: {
+        glass: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+        'glass-lg': '0 16px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06)',
+        'glass-xl': '0 24px 64px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08)',
+        glow: '0 0 40px rgba(56, 189, 248, 0.08)',
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        shimmer: 'shimmer 2s infinite linear',
+        float: 'float 4s ease-in-out infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config;
