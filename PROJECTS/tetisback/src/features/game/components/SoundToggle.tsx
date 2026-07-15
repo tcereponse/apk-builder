@@ -9,6 +9,7 @@ return (
 <button
 onClick={toggle}
 className="bg-gray-800 p-2 rounded-lg border border-gray-600 text-gray-300 hover:bg-gray-700 transition-colors"
+>
 {enabled ? <Volume2 size={20} /> : <VolumeX size={20} />}
 </button>
 );
