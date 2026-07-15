@@ -90,6 +90,7 @@ return (
 <button
 onClick={resetFilters}
 className="text-xs text-zinc-500 hover:text-slate-300 transition-colors self-end"
+>
 Réinitialiser les filtres
 </button>
 )}
