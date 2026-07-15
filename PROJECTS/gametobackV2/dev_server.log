@@ -1,8 +1,168 @@
 --- Lancement du Dev Server pour gametobackV2 ---
- ERROR  Unexpected token 'o', "on
-{
-"na"... is not valid JSON while parsing 'on
-{
-"name": "gametobackv2",
-"private' in F:\save disk E\bestmode\PROJECTS\gametobackV2\package.json
-For help, run: pnpm help install
+ WARN  GET https://registry.npmjs.org/@types%2Freact error (EPROTO). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/tailwindcss error (EPROTO). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/vitest error (EPROTO). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/msw error (EPROTO). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 23, reused 19, downloaded 1, added 0
+Progress: resolved 27, reused 25, downloaded 1, added 0
+Progress: resolved 27, reused 25, downloaded 2, added 0
+Progress: resolved 28, reused 25, downloaded 2, added 0
+Progress: resolved 79, reused 62, downloaded 5, added 0
+Progress: resolved 126, reused 74, downloaded 20, added 0
+Progress: resolved 181, reused 104, downloaded 41, added 0
+ WARN  GET https://registry.npmjs.org/@istanbuljs/schema/-/schema-0.1.6.tgz error (ERR_SSL_SSLV3_ALERT_BAD_RECORD_MAC). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 315, reused 164, downloaded 55, added 0
+Progress: resolved 359, reused 200, downloaded 69, added 0
+Progress: resolved 395, reused 227, downloaded 93, added 0
+Progress: resolved 405, reused 237, downloaded 121, added 0
+ WARN  2 deprecated subdependencies found: glob@10.5.0, whatwg-encoding@3.1.1
+Packages: +360
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 406, reused 238, downloaded 121, added 1
+Progress: resolved 406, reused 238, downloaded 121, added 7
+Progress: resolved 406, reused 238, downloaded 121, added 13
+Progress: resolved 406, reused 238, downloaded 121, added 26
+Progress: resolved 406, reused 238, downloaded 121, added 36
+Progress: resolved 406, reused 238, downloaded 121, added 57
+Progress: resolved 406, reused 238, downloaded 121, added 61
+Progress: resolved 406, reused 238, downloaded 121, added 65
+Progress: resolved 406, reused 238, downloaded 121, added 81
+Progress: resolved 406, reused 238, downloaded 121, added 105
+Progress: resolved 406, reused 238, downloaded 121, added 116
+Progress: resolved 406, reused 238, downloaded 121, added 135
+Progress: resolved 406, reused 238, downloaded 121, added 157
+Progress: resolved 406, reused 238, downloaded 121, added 180
+Progress: resolved 406, reused 238, downloaded 121, added 215
+Progress: resolved 406, reused 238, downloaded 121, added 224
+Progress: resolved 406, reused 238, downloaded 121, added 233
+Progress: resolved 406, reused 238, downloaded 121, added 239
+Progress: resolved 406, reused 238, downloaded 121, added 257
+Progress: resolved 406, reused 238, downloaded 121, added 298
+Progress: resolved 406, reused 238, downloaded 121, added 316
+Progress: resolved 406, reused 238, downloaded 121, added 317
+Progress: resolved 406, reused 238, downloaded 121, added 321
+Progress: resolved 406, reused 238, downloaded 121, added 331
+Progress: resolved 406, reused 238, downloaded 121, added 339
+Progress: resolved 406, reused 238, downloaded 121, added 340
+Progress: resolved 406, reused 238, downloaded 121, added 341
+Progress: resolved 406, reused 238, downloaded 121, added 347
+Progress: resolved 406, reused 238, downloaded 121, added 353
+Progress: resolved 406, reused 238, downloaded 121, added 354
+Progress: resolved 406, reused 238, downloaded 121, added 356
+Progress: resolved 406, reused 238, downloaded 121, added 357
+Progress: resolved 406, reused 238, downloaded 122, added 358
+Progress: resolved 406, reused 238, downloaded 122, added 359
+Progress: resolved 406, reused 238, downloaded 122, added 360
+Progress: resolved 406, reused 238, downloaded 122, added 360, done
+
+dependencies:
++ @hookform/resolvers 3.10.0 (5.4.0 is available)
++ @tanstack/react-query 5.101.2
++ @tanstack/react-query-devtools 5.101.2
++ clsx 2.1.1
++ date-fns 3.6.0 (4.4.0 is available)
++ embla-carousel-autoplay 8.6.0
++ embla-carousel-react 8.6.0
++ framer-motion 11.18.2 (12.42.2 is available)
++ idb 8.0.3
++ lucide-react 0.378.0 (1.24.0 is available)
++ react 18.3.1 (19.2.7 is available)
++ react-dom 18.3.1 (19.2.7 is available)
++ react-hook-form 7.81.0
++ react-router-dom 6.30.4 (7.18.1 is available)
++ tailwind-merge 2.6.1 (3.6.0 is available)
++ zod 3.25.76 (4.4.3 is available)
+
+devDependencies:
++ @testing-library/jest-dom 6.9.1
++ @testing-library/react 16.3.2
++ @testing-library/user-event 14.6.1
++ @types/react 18.3.31 (19.2.17 is available)
++ @types/react-dom 18.3.7 (19.2.3 is available)
++ @vitejs/plugin-react 4.7.0 (6.0.3 is available)
++ @vitest/coverage-v8 2.1.9 (4.1.10 is available)
++ autoprefixer 10.5.3
++ jsdom 24.1.3 (29.1.1 is available)
++ msw 2.15.0
++ postcss 8.5.19
++ tailwindcss 3.4.19 (4.3.2 is available)
++ typescript 5.9.3 (7.0.2 is available)
++ vite 5.4.21 (8.1.4 is available)
++ vitest 2.1.9 (4.1.10 is available)
+
+The following dependencies have build scripts that were ignored: esbuild, msw
+To allow the execution of build scripts for these packages, add their names to "pnpm.onlyBuiltDependencies" in your "package.json", then run "pnpm rebuild"
+
+Done in 1m 13.3s using pnpm v9.15.9
+
+> gametobackv2@1.0.0 dev F:\save disk E\bestmode\PROJECTS\gametobackV2
+> vite "--host" "--strictPort"
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m1116[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.148:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+Error: [31m  Failed to scan for dependencies from entries:
+  F:/save disk E/bestmode/PROJECTS/gametobackV2/index.html
+
+  [39m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mExpected ")" but found "to"[0m
+
+    src/app/contexts/FavoritesContext.tsx:54:20:
+[37m      54 │ console.warn(Failed [32mto[37m add favorite ${id}:, error);
+         │                     [32m~~[37m
+         ╵                     [32m)[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mExpected ">" but found "<"[0m
+
+    src/features/games/components/GameCard.tsx:17:6:
+[37m      17 │       [32m<[37mLink to={`/game/${game.id}`} className="block w-full h-full">
+         │       [32m^[37m
+         ╵       [32m>[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mExpected ">" but found "<"[0m
+
+    src/features/games/pages/GameDetailPage.tsx:43:6:
+[37m      43 │       [32m<[37mdiv className="relative">
+         │       [32m^[37m
+         ╵       [32m>[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mExpected ">" but found "<"[0m
+
+    src/features/games/pages/HomePage.tsx:94:0:
+[37m      94 │ [32m<[37m/button>
+         │ [32m^[37m
+         ╵ [32m>[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mExpected ">" but found "<"[0m
+
+    src/shared/components/ui/Button.tsx:52:0:
+[37m      52 │ [32m<[37mcircle
+         │ [32m^[37m
+         ╵ [32m>[0m
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mExpected ")" but found "{"[0m
+
+    src/shared/services/api.ts:13:44:
+[37m      13 │ ...entries.map(([key, value]) => $[32m{[37mkey}=${encodeURIComponent(Strin...
+         │                                   [32m^[37m
+         ╵                                   [32m)[0m
+
+
+    at failureErrorWithLog (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:1472:15)
+    at F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:945:25
+    at runOnEndCallbacks (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:1315:45)
+    at buildResponseToResult (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:943:7)
+    at F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:955:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:954:54)
+    at handleRequest (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:647:17)
+    at handleIncomingPacket (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:672:7)
+    at Socket.readFromStdout (F:\save disk E\bestmode\PROJECTS\gametobackV2\node_modules\.pnpm\esbuild@0.21.5\node_modules\esbuild\lib\main.js:600:7)

@@ -10,13 +10,13 @@
 --border: 0 0% 20%;
 --radius: 0.75rem;
 }
-{
+*, *::before, *::after {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
 
-{
+html {
 -webkit-tap-highlight-color: transparent;
 scroll-behavior: smooth;
 }
@@ -84,11 +84,4 @@ scrollbar-width: none;
 .scrollbar-hide::-webkit-scrollbar {
 display: none;
 }
-}
-/// <reference types="vite/client" />
-interface ImportMetaEnv {
-readonly VITE_RAWG_API_KEY: string
-}
-interface ImportMeta {
-readonly env: ImportMetaEnv
 }
