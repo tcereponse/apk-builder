@@ -51,7 +51,7 @@ if (prev.includes(id)) return prev;
 return [...prev, id];
 });
 } catch (error) {
-console.warn(Failed to add favorite ${id}:, error);
+console.warn(`Failed to add favorite ${id}:`, error);
 }
 }, []);
 const removeFavorite = useCallback(async (id: number) => {
@@ -60,7 +60,7 @@ const db = await getDB();
 await db.delete(STORE_NAME, id);
 setFavorites((prev) => prev.filter((fid) => fid !== id));
 } catch (error) {
-console.warn(Failed to remove favorite ${id}:, error);
+console.warn(`Failed to remove favorite ${id}:`, error);
 }
 }, []);
 const toggleFavorite = useCallback(
