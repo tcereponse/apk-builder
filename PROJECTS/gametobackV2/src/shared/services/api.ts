@@ -40,15 +40,15 @@ if (platform) params.platforms = platform;
 if (genre) params.genres = genre;
 if (dates) params.dates = dates;
 else if (year) {
-const start = ${year}-01-01;
-const end = ${year}-12-31;
-params.dates = ${start},${end};
+const start = `${year}-01-01`;
+const end = `${year}-12-31`;
+params.dates = `${start},${end}`;
 }
-const url = ${RAWG_API_BASE}/games${buildQueryString(params)};
+const url = `${RAWG_API_BASE}/games${buildQueryString(params)}`;
 const response = await fetch(url);
 if (!response.ok) {
 const errorText = await response.text();
-throw new Error(API Error ${response.status}: ${errorText});
+throw new Error(`API Error ${response.status}: ${errorText}`);
 }
 const json = await response.json();
 const parsed = GameListResponseSchema.safeParse(json);
@@ -59,11 +59,11 @@ throw new Error('Invalid response format from RAWG API');
 return parsed.data;
 }
 export async function fetchGameById(id: number | string): Promise<Game> {
-const url = ${RAWG_API_BASE}/games/${id}?key=${RAWG_API_KEY}&language=fr;
+const url = `${RAWG_API_BASE}/games/${id}?key=${RAWG_API_KEY}&language=fr`;
 const response = await fetch(url);
 if (!response.ok) {
 const errorText = await response.text();
-throw new Error(API Error ${response.status}: ${errorText});
+throw new Error(`API Error ${response.status}: ${errorText}`);
 }
 const json = await response.json();
 const parsed = GameDetailResponseSchema.safeParse(json);
@@ -88,11 +88,11 @@ ids: chunk.join(','),
 page_size: chunk.length,
 language: 'fr',
 };
-const url = ${RAWG_API_BASE}/games${buildQueryString(params)};
+const url = `${RAWG_API_BASE}/games${buildQueryString(params)}`;
 const response = await fetch(url);
 if (!response.ok) {
 const errorText = await response.text();
-throw new Error(API Error ${response.status}: ${errorText});
+throw new Error(`API Error ${response.status}: ${errorText}`);
 }
 const json = await response.json();
 const parsed = GameListResponseSchema.safeParse(json);
