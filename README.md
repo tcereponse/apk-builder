@@ -1,102 +1,60 @@
-# PomodoroPro
+# backtogame
 
-Timer Pomodoro avec cycles travail/pause paramétrables, statistiques de productivité, sons de notification et historique des sessions.
+"Je veux créer une application web et mobile de référencement de jeux vidéo couvrant les sorties de 1989 à 2026. L'application doit avoir un design moderne, sombre et premium (Glassmorphism, Tailwind CSS, palette slate/zinc).
+
+L'interface principale doit afficher les jeux sous forme de carrousels horizontaux dynamiques (utiliser Embla Carousel ou équivalent). Chaque carte de jeu doit afficher : l'image de fond du jeu (format cover/logo), le nom, la date de sortie, la ou les plateformes, ainsi qu'un descriptif abrégé en français.
+
+Techniquement, la couche de données (Data Layer) doit récupérer toutes ces informations en temps réel via l'API RAWG (clé API : 431a4b53e7f54290b1de7e69c904fcbe) et les flux IGDB/Twitch, en implémentant une logique de Fetch avec React Query (TanStack Query) pour g
 
 ## 🚀 Démarrage rapide
 
 ```bash
-# Installation
 npm install
-
-# Développement
 npm run dev
-
-# Build production
-npm run build
-
-# Tests
-npm test
-
-# Vérification complète (typecheck + lint + format + test)
-npm run verify
 ```
 
-## 📋 Scripts
+Le serveur de développement démarre sur http://localhost:5173
+
+## 📜 Scripts disponibles
 
 | Script | Description |
 |--------|-------------|
-| `npm run dev` | Serveur de développement Vite |
-| `npm run build` | Build production (tsc + vite build) |
-| `npm run preview` | Preview du build production |
-| `npm test` | Tests unitaires (Vitest) |
-| `npm run test:coverage` | Tests avec coverage |
-| `npm run lint` | ESLint |
-| `npm run lint:fix` | ESLint avec auto-fix |
-| `npm run format` | Prettier (write) |
-| `npm run typecheck` | Vérification TypeScript |
-| `npm run verify` | Vérification complète (CI) |
+| `npm run dev` | Démarre le serveur de développement (avec vérification TS) |
+| `npm run build` | Build de production |
+| `npm run preview` | Prévisualise le build de production |
+| `npm run verifySyntax` | Vérification TypeScript (tsc --noEmit) |
 
-## 🏗️ Architecture
+
+## 🛠️ Stack technique
+
+- **React** 18
+- **Build tool**: vite
+- **TypeScript** 5
+- **Styling**: tailwind
+- **Routing**: React Router DOM v6 (HashRouter)
+
+## ✨ Fonctionnalités
+
+- (aucune feature supplémentaire)
+
+## 📁 Structure du projet
 
 ```
-src/
-├── app/              # App shell, providers, routing
-├── features/         # Features autonomes (auth, tasks, etc.)
-│   └── {feature}/
-│       ├── api/      # Repository pattern
-│       ├── components/# Composants de la feature
-│       ├── hooks/    # Hooks (TanStack Query)
-│       └── types.ts  # Types + Zod schemas
-├── shared/           # Code partagé
-│   ├── ui/           # Design system
-│   ├── lib/          # Utils (cn, formatters)
-│   └── api/          # Client HTTP
-└── main.tsx          # Entry point
+backtogame/
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+├── tailwind.config.ts
+├── postcss.config.js
+└── src/
+    ├── main.tsx
+    ├── App.tsx
+    ├── index.css
+    └── components/
+        └── MainComponent.tsx
 ```
-
-## 🧪 Tests
-
-- **Vitest** + **React Testing Library** pour les tests unitaires
-- Coverage minimum: 80%
-- Tests dans `src/**/*.test.tsx`
-
-```bash
-npm test           # Watch mode
-npm run test:coverage  # Coverage report
-```
-
-## 🐳 Docker
-
-```bash
-# Build
-docker-compose up --build
-
-# Dev
-docker-compose up dev
-```
-
-## 📦 Déploiement
-
-### Vercel
-```bash
-npm i -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm i -g netlify-cli
-netlify deploy --build
-```
-
-## 🔧 Configuration
-
-Copier `.env.example` vers `.env` et configurer les variables.
-
-## 📝 Licence
-
-MIT
 
 ---
 
-Généré par **React Forge** — Gold Grade Industrial
+Généré par **React Forge** le 15/07/2026
