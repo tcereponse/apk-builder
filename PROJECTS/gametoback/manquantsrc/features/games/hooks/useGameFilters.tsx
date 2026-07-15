@@ -1,0 +1,1 @@
+Filtres métier non encapsulésImport manquantsrc/shared/hooks/useGames.tsLes hooks ne sont pas exportés depuis un barrel
