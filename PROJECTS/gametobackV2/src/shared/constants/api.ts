@@ -33,35 +33,35 @@ z.object({
 platform: PlatformSchema,
 released_at: z.string().nullable().optional(),
 })
-),
+).nullable().optional(),
 genres: z.array(
 z.object({
 id: z.number(),
 name: z.string(),
 slug: z.string(),
 })
-),
+).nullable().optional(),
 tags: z.array(
 z.object({
 id: z.number(),
 name: z.string(),
 slug: z.string(),
 })
-),
+).nullable().optional(),
 developers: z.array(
 z.object({
 id: z.number(),
 name: z.string(),
 slug: z.string(),
 })
-),
+).nullable().optional(),
 publishers: z.array(
 z.object({
 id: z.number(),
 name: z.string(),
 slug: z.string(),
 })
-),
+).nullable().optional(),
 screenshots: z
 .array(
 z.object({
@@ -69,13 +69,13 @@ id: z.number(),
 image: z.string(),
 })
 )
-.optional(),
+.nullable().optional(),
 clip: z
 .object({
 clip: z.string(),
 preview: z.string(),
 })
-.optional(),
+.nullable().optional(),
 });
 export const GameListResponseSchema = z.object({
 count: z.number(),
