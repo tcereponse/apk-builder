@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GameCardProps } from '@shared/types/game.types';
+import { GameCardProps } from '@shared/constants/api';
 import { formatDate } from '@shared/utils/formatDate';
 import { formatPlatforms } from '@shared/utils/formatPlatforms';
 import { truncateText } from '@shared/utils/truncateText';

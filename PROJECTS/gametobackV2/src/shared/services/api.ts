@@ -5,8 +5,8 @@ GameListResponse,
 GameDetailResponseSchema,
 GameListResponseSchema,
 GameSchema,
-} from '@shared/types/game.schema';
-import { GameFilters } from '@shared/types/game.types';
+} from '@shared/constants/api';
+import { GameFilters } from '@shared/constants/api';
 function buildQueryString(params: Record<string, string | number | boolean | undefined>): string {
 const entries = Object.entries(params).filter(([, value]) => value !== undefined && value !== '');
 if (entries.length === 0) return '';

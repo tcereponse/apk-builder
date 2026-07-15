@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { GameFilters } from '@shared/types/game.types';
+import { GameFilters } from '@shared/constants/api';
 interface UseGamesFiltersReturn {
 filters: GameFilters;
 setSearch: (search: string) => void;

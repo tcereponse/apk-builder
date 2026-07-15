@@ -1,6 +1,6 @@
 import { useQuery, useInfiniteQuery } from '@tanstack/react-query';
 import { fetchGames, fetchGameById, fetchGamesByIds } from '@shared/services/api';
-import { GameFilters } from '@shared/types/game.types';
+import { GameFilters } from '@shared/constants/api';
 export function useGames(filters: GameFilters = {}) {
 const { search, year, platform, genre, ordering = '-released', page = 1, pageSize = 20 } = filters;
 const queryKey = ['games', { search, year, platform, genre, ordering, page, pageSize }];

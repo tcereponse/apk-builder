@@ -6,7 +6,7 @@ import { GameCard } from './GameCard';
 import { GameCardSkeleton } from '@shared/components/ui/Skeleton';
 import { ErrorMessage } from '@shared/components/ui/ErrorMessage';
 import { EmptyState } from '@shared/components/ui/EmptyState';
-import { CarouselProps } from '@shared/types/game.types';
+import { CarouselProps } from '@shared/constants/api';
 import { useFavorites } from '@app/contexts/FavoritesContext';
 import { motion, AnimatePresence } from 'framer-motion';
 export function Carousel({

@@ -1,4 +1,4 @@
-import { Platform } from '@shared/types/game.schema';
+import { Platform } from '@shared/constants/api';
 const platformIcons: Record<string, string> = {
 pc: '💻',
 playstation: '🎮',
