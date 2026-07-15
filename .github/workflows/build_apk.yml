@@ -18,37 +18,46 @@ jobs:
         with:
           node-version: 18
 
-      - name: Setup Java
+      - name: Setup Java (Temurin — stable avec Android SDK)
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
+          distribution: 'temurin'
           java-version: '17'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Installation des dépendances
+      - name: Installation des dépendances npm
         working-directory: PROJECTS/${{ github.event.inputs.project_name }}
         run: npm install
 
-      - name: Build Vite
+      - name: Build Vite (production)
         working-directory: PROJECTS/${{ github.event.inputs.project_name }}
         run: npm run build
 
-      - name: Ajout de Capacitor
+      - name: Intégration Capacitor v6
         working-directory: PROJECTS/${{ github.event.inputs.project_name }}
         run: |
-          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
           npx cap init KirovApp com.kirov.app --web-dir dist
           npx cap add android
           npx cap sync android
 
-      - name: Compilation de l'APK
-        working-directory: PROJECTS/${{ github.event.inputs.project_name }}/android
-        run: ./gradlew assembleDebug
+      - name: 🧹 Purge cache Gradle corrompu (Fix bcprov JAR)
+        run: |
+          rm -rf ~/.gradle/caches/jars-*
+          rm -rf ~/.gradle/caches/modules-*
+          rm -rf ~/.gradle/caches/transforms-*
 
-      - name: Upload APK Artifact
+      - name: Compilation APK Debug
+        working-directory: PROJECTS/${{ github.event.inputs.project_name }}/android
+        run: ./gradlew assembleDebug --no-daemon --no-build-cache
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.jvmargs=-Xmx2048m -Dorg.gradle.daemon=false -Dkotlin.incremental=false"
+
+      - name: 📦 Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.inputs.project_name }}_APK
           path: PROJECTS/${{ github.event.inputs.project_name }}/android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 7

@@ -62,3 +62,7 @@ error: Could not read from file: F:/save disk E/bestmode/PROJECTS/gametoback/nod
     at F:\save disk E\bestmode\PROJECTS\gametoback\node_modules\esbuild\lib\main.js:945:25
     at F:\save disk E\bestmode\PROJECTS\gametoback\node_modules\esbuild\lib\main.js:1353:9
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[2m13:53:11[22m [36m[1m[vite][22m[39m changed tsconfig file detected: F:\save disk E\bestmode\PROJECTS\gametoback\tsconfig.json - Clearing cache and forcing full-reload to ensure TypeScript is compiled with updated config values.
+Exception 0xc0000006 0x0 0xe0d998 0x80123e
+PC=0x80123e
+
