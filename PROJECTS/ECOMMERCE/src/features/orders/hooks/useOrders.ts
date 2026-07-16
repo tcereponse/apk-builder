@@ -13,14 +13,14 @@ export function useOrders() {
 }
 
 export function useOrder(id: string) {
- return useQuery({
- queryKey: ['order', id],
- queryFn: async () => {
- const response = await api.get(/orders/${id});
- return response.data as Order;
- },
- enabled: !!id,
- });
+  return useQuery({
+    queryKey: ['order', id],
+    queryFn: async () => {
+      const response = await api.get(`/orders/${id}`);
+      return response.data as Order;
+    },
+    enabled: !!id,
+  });
 }
 
 export function useCreateOrder() {
@@ -32,13 +32,13 @@ export function useCreateOrder() {
 }
 
 export function useUpdateOrderStatus() {
- const queryClient = useQueryClient();
- return useMutation({
- mutationFn: ({ id, status }: { id: string; status: string }) =>
- api.patch(/orders/${id}, { status }),
- onSuccess: (, { id }) => {
- queryClient.invalidateQueries({ queryKey: ['orders'] });
- queryClient.invalidateQueries({ queryKey: ['order', id] });
- },
- });
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, status }: { id: string; status: string }) =>
+      api.patch(`/orders/${id}`, { status }),
+    onSuccess: (_, { id }) => {
+      queryClient.invalidateQueries({ queryKey: ['orders'] });
+      queryClient.invalidateQueries({ queryKey: ['order', id] });
+    },
+  });
 }
