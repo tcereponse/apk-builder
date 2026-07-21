@@ -54,7 +54,7 @@ export function CommandMenu({ open, onClose, items, placeholder = 'Rechercher...
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 pt-[20vh]">
-      <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onClick={onClose} />
+      <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onClick={onClose}></div>
       <div className="relative z-10 w-full max-w-lg overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-2xl">
         <div className="flex items-center border-b border-slate-800 px-3">
           <Search className="h-4 w-4 shrink-0 text-slate-500" />
@@ -64,35 +64,37 @@ export function CommandMenu({ open, onClose, items, placeholder = 'Rechercher...
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={placeholder}
-            className="h-12 w-full bg-transparent px-2 text-sm text-slate-100 placeholder:text-slate-600 focus:outline-none"
+            className="flex h-11 w-full bg-transparent py-3 text-sm outline-none placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 text-slate-100"
           />
         </div>
-        <div className="max-h-[300px] overflow-y-auto p-1">
-          {filtered.length === 0 ? (
-            <div className="py-6 text-center text-sm text-slate-500">Aucun résultat</div>
-          ) : (
-            filtered.map((item, i) => (
-              <button
+        {filtered.length > 0 ? (
+          <ul className="max-h-[300px] overflow-y-auto p-2">
+            {filtered.map((item, index) => (
+              <li
                 key={item.id}
-                onMouseEnter={() => setActiveIndex(i)}
-                onClick={() => {
-                  item.action()
-                  onClose()
-                }}
                 className={cn(
-                  'flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm transition',
-                  i === activeIndex ? 'bg-slate-800 text-slate-100' : 'text-slate-300'
+                  'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none aria-selected:bg-slate-800 aria-selected:text-slate-100',
+                  index === activeIndex && 'bg-slate-800 text-slate-100'
                 )}
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  item.action();
+                  onClose();
+                }}
+                role="option"
+                aria-selected={index === activeIndex}
               >
-                {item.icon}
+                {item.icon && <span className="mr-2 h-4 w-4">{item.icon}</span>}
                 <div className="flex-1">
-                  <div className="font-medium">{item.label}</div>
-                  {item.description && <div className="text-xs text-slate-500">{item.description}</div>}
+                  <p className="font-medium text-slate-100">{item.label}</p>
+                  {item.description && <p className="text-xs text-slate-400">{item.description}</p>}
                 </div>
-              </button>
-            ))
-          )}
-        </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="p-4 text-center text-sm text-slate-500">Aucun résultat.</p>
+        )}
       </div>
     </div>
   )

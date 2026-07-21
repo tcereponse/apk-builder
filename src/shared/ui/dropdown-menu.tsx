@@ -17,7 +17,7 @@ export function DropdownMenu({ trigger, children, align = 'start', className }: 
     const handler = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false)
-      }
+      }F
     }
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
@@ -57,7 +57,7 @@ export function DropdownMenuItem({ children, onClick, className }: { children: R
 }
 
 export function DropdownMenuSeparator({ className }: { className?: string }) {
-  return <div className={cn('my-1 h-px bg-slate-800', className)} />
+  return <div className={cn('my-1 h-px bg-slate-800', className)}></div>
 }
 
 export function DropdownMenuLabel({ children, className }: { children: ReactNode; className?: string }) {

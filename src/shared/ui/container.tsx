@@ -13,5 +13,5 @@ export function Container({ className, size = 'lg', ...props }: ContainerProps) 
     xl: 'max-w-7xl',
     full: 'max-w-none',
   }
-  return <div className={cn('mx-auto w-full px-4', sizes[size], className)} {...props} />
+  return <div className={cn('mx-auto w-full px-4', sizes[size], className)} {...props}></div>
 }

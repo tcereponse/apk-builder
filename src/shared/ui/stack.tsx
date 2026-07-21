@@ -36,6 +36,6 @@ export function Stack({
         className
       )}
       {...props}
-    />
+    ></div>
   )
 }

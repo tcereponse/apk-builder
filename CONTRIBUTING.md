@@ -1,4 +1,4 @@
-# Contribuer à PomodoroPro
+# Contribuer à DevPortfolio
 
 Merci de votre intérêt pour contribuer ! Ce guide vous aidera à démarrer.
 
@@ -7,7 +7,7 @@ Merci de votre intérêt pour contribuer ! Ce guide vous aidera à démarrer.
 ```bash
 # Clone le repo
 git clone <repo-url>
-cd pomodoropro
+cd devportfolio
 
 # Installe les dépendances
 npm install

@@ -1,8 +1,8 @@
-# Architecture — PomodoroPro
+# Architecture — DevPortfolio
 
 ## Vue d'ensemble
 
-Timer Pomodoro avec cycles travail/pause paramétrables, statistiques de productivité, sons de notification et historique des sessions.
+Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive.
 
 ## Stack technique
 

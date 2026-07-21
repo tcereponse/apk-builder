@@ -1,6 +1,6 @@
 # Changelog
 
-Tous les changements notables de PomodoroPro seront documentés ici.
+Tous les changements notables de DevPortfolio seront documentés ici.
 
 Le format est basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/),
 et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
@@ -10,7 +10,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 ### Added
 - Projet initial généré par React Forge Gold Grade
 
-## [0.1.0] - 2026-07-13
+## [0.1.0] - 2026-07-21
 
 ### Added
 - Architecture feature-based

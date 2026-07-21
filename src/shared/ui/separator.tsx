@@ -16,6 +16,6 @@ export function Separator({ className, orientation = 'horizontal', ...props }: S
         className
       )}
       {...props}
-    />
+    ></div>
   )
 }

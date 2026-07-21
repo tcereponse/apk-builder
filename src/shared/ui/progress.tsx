@@ -12,7 +12,7 @@ export function Progress({ value, className }: ProgressProps) {
       <div
         className="h-full bg-gradient-to-r from-cyan-500 to-teal-500 transition-all duration-300"
         style={{ width: `${clamped}%` }}
-      />
+      ></div>
     </div>
   )
 }

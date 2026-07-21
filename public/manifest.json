@@ -1,7 +1,7 @@
 {
-  "name": "PomodoroPro",
-  "short_name": "PomodoroPro",
-  "description": "Timer Pomodoro avec cycles travail/pause paramétrables, statistiques de productivité, sons de notification et historique des sessions.",
+  "name": "DevPortfolio",
+  "short_name": "DevPortfolio",
+  "description": "Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",

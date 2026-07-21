@@ -1,25 +1,30 @@
 # Dependencies
-node_modules
+node_modules/
 .pnp
-.pnp.js
+.yarn/
 
-# Build output
-dist
-dist-ssr
+# Build
+dist/
+dist-ssr/
 *.local
 
+# Environment
+.env
+.env.local
+.env.*.local
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Editor directories
+# Editor
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
@@ -27,14 +32,10 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# Environment
-.env
-.env.local
-.env.*.local
-
-# Testing
-coverage
+# Test
+coverage/
+.nyc_output/
 
 # Misc
-.cache
-.temp
+.cache/
+.temp/

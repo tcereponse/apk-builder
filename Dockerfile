@@ -1,4 +1,4 @@
-# Multi-stage build for PomodoroPro
+# Multi-stage build for DevPortfolio
 FROM node:20-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./

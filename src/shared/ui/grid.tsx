@@ -16,5 +16,5 @@ export function Grid({ className, cols = 2, gap = 'md', ...props }: GridProps) {
     12: 'grid-cols-12',
   }
   const gaps = { none: '', sm: 'gap-2', md: 'gap-4', lg: 'gap-6' }
-  return <div className={cn('grid', colClasses[cols], gaps[gap], className)} {...props} />
+  return <div className={cn('grid', colClasses[cols], gaps[gap], className)} {...props}></div>
 }

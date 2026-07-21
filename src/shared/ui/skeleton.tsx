@@ -1,5 +1,6 @@
-import { type ReactNode } from 'react'
+import { type HTMLAttributes } from 'react'
+import { cn } from '../lib/utils'
 
-export function Skeleton({ children }: { children?: ReactNode }) {
-  return <>{children}</>
+export function Skeleton({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn('animate-pulse rounded-md bg-slate-800', className)} {...props}></div>
 }
