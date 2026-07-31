@@ -1,32 +1,505 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#0f172a" />
-    <meta name="description" content="Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive." />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TigerGamer - L'Encyclopédie Ultime du Jeu Vidéo</title>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- VARIABLES ET RESET --- */
+        :root {
+            --bg-dark: #0f0c1b;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --primary-orange: #ff5e00;
+            --secondary-purple: #8a2be2;
+            --neon-cyan: #00f2fe;
+            --text-light: #f4f4f9;
+            --text-gray: #a0a0b0;
+        }
 
-    <!-- PWA -->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="DevPortfolio" />
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DevPortfolio" />
-    <meta property="og:description" content="Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive." />
-    <meta property="og:site_name" content="DevPortfolio" />
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="DevPortfolio" />
-    <meta name="twitter:description" content="Portfolio développeur élégant avec sections projets, compétences, expérience et contact. Animations au scroll, thème sombre, responsive." />
+        /* --- EFFETS DE FOND --- */
+        .circle-blur {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+        }
+        .blur-1 { width: 400px; height: 400px; background: var(--primary-orange); top: -100px; left: -100px; opacity: 0.5; }
+        .blur-2 { width: 450px; height: 450px; background: var(--secondary-purple); top: 300px; right: -100px; opacity: 0.6; }
 
-    <title>DevPortfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        /* --- NAVBAR --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(15, 12, 27, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-orange);
+            background: linear-gradient(45deg, var(--primary-orange), var(--neon-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-orange);
+            text-shadow: 0 0 10px var(--primary-orange);
+        }
+
+        .btn-main {
+            background: linear-gradient(45deg, var(--primary-orange), var(--secondary-purple));
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 94, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 94, 0, 0.7);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            min-height: 80vh;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            background: rgba(255, 94, 0, 0.15);
+            color: var(--primary-orange);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--primary-orange);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--primary-orange), var(--neon-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-gray);
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Barre de Recherche */
+        .search-box {
+            display: flex;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 6px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            color: white;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            background: var(--primary-orange);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: var(--secondary-purple);
+        }
+
+        /* --- TENDANCES (CARDS) --- */
+        .trending {
+            padding: 60px 8%;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title i {
+            color: var(--primary-orange);
+        }
+
+        .grid-games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+        }
+
+        .game-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game-tag {
+            font-size: 12px;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .game-title {
+            font-size: 20px;
+            margin: 5px 0 10px 0;
+        }
+
+        .game-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .rating {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* --- CATEGORIES --- */
+        .categories {
+            padding: 60px 8%;
+        }
+
+        .cat-list {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cat-btn {
+            padding: 15px 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .cat-btn:hover {
+            background: linear-gradient(45deg, var(--secondary-purple), var(--primary-orange));
+            border-color: transparent;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 100px;
+            background: rgba(10, 8, 18, 0.9);
+            padding: 40px 8% 20px 8%;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .socials a {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: var(--primary-orange);
+        }
+
+        .copyright {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 38px; }
+            .nav-links { display: none; }
+            .search-box { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cercles lumineux d'arrière-plan -->
+    <div class="circle-blur blur-1"></div>
+    <div class="circle-blur blur-2"></div>
+
+    <!-- NAVBAR -->
+    <header>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-cat"></i> Tiger<span>Gamer</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#trending">Tendance</a></li>
+            <li><a href="#categories">Catégories</a></li>
+            <li><a href="#top">Top Jeux</a></li>
+        </ul>
+        <button class="btn-main" id="loginBtn">Connexion</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tag"><i class="fa-solid fa-bolt"></i> La base de données #1</span>
+            <h1>Trouvez votre prochain <span>Jeu Vidéo</span> préféré.</h1>
+            <p>Explorez des milliers de jeux, lisez les avis de la communauté, comparez les notes et suivez les dernières sorties en temps réel.</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Rechercher un jeu (ex: Cyberpunk, Zelda...)" />
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENDANCES SECTION -->
+    <section class="trending" id="trending">
+        <h2 class="section-title"><i class="fa-solid fa-fire"></i> Jeux du Moment</h2>
+        
+        <div class="grid-games" id="gamesGrid">
+            <!-- Card 1 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Game" class="game-img">
+                <div class="game-info">
+                    <span class="game-tag">Cyberpunk / RPG</span>
+                    <h3 class="game-title">Neon City 2077</h3>
+                    <div class="game-meta">
+                        <span><i class="fa-solid fa-desktop"></i> PC, PS5, Xbox</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Game" class="game-img">
+                <div class="game-info">
+                    <span class="game-tag">Aventure / Action</span>
+                    <h3 class="game-title">Shadow Quest</h3>
+                    <div class="game-meta">
+                        <span><i class="fa-solid fa-gamepad"></i> PS5, Switch</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Game" class="game-img">
+                <div class="game-info">
+                    <span class="game-tag">Stratégie / Spatiale</span>
+                    <h3 class="game-title">Galactic Wars</h3>
+                    <div class="game-meta">
+                        <span><i class="fa-solid fa-desktop"></i> PC</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Game" class="game-img">
+                <div class="game-info">
+                    <span class="game-tag">Rétro / Arcade</span>
+                    <h3 class="game-title">Pixel Runner</h3>
+                    <div class="game-meta">
+                        <span><i class="fa-solid fa-mobile-screen"></i> Mobile, PC</span>
+                        <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+        <h2 class="section-title"><i class="fa-solid fa-list"></i> Parcourir par Genre</h2>
+        <div class="cat-list">
+            <a href="#" class="cat-btn"><i class="fa-solid fa-gun"></i> Action</a>
+            <a href="#" class="cat-btn"><i class="fa-solid fa-dragon"></i> RPG / Fantasy</a>
+            <a href="#" class="cat-btn"><i class="fa-solid fa-ghost"></i> Horreur</a>
+            <a href="#" class="cat-btn"><i class="fa-solid fa-car"></i> Course</a>
+            <a href="#" class="cat-btn"><i class="fa-solid fa-chess"></i> Stratégie</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-cat"></i> Tiger<span>Gamer</span>
+            </a>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2023 TigerGamer. Tous droits réservés. Développé pour les passionnés de gaming.</p>
+    </footer>
+
+    <!-- JAVASCRIPT Interactif -->
+    <script>
+        // 1. Gestion de la recherche interactif
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const gameCards = document.querySelectorAll('.game-card');
+
+        function filterGames() {
+            const query = searchInput.value.toLowerCase();
+            
+            gameCards.forEach(card => {
+                const title = card.querySelector('.game-title').textContent.toLowerCase();
+                const tag = card.querySelector('.game-tag').textContent.toLowerCase();
+                
+                if (title.includes(query) || tag.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        searchBtn.addEventListener('click', filterGames);
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') filterGames();
+        });
+
+        // 2. Bouton de connexion avec Pop-up dynamique
+        const loginBtn = document.getElementById('loginBtn');
+        loginBtn.addEventListener('click', () => {
+            alert('🐯 Bienvenue sur TigerGamer ! Le module de connexion ouvrira bientôt.');
+        });
+
+        // 3. Effet d'apparition au scroll pour la Navbar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(15, 12, 27, 0.95)';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.5)';
+            } else {
+                header.style.background = 'rgba(15, 12, 27, 0.8)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
